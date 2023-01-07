@@ -25,11 +25,11 @@ const NavbarItems = [
     slug: "/about",
     icon: FiUser,
   },
-  {
-    name: "Now",
-    slug: "/now",
-    icon: FiClock,
-  },
+  // {
+  //   name: "Now",
+  //   slug: "/now",
+  //   icon: FiClock,
+  // },
   {
     name: "Dashboard",
     slug: "/dashboard",
@@ -56,7 +56,7 @@ const Nav = ({ path }: { path: string }) => {
               {path === item.slug ? (
                 <button
                   key={index}
-                  className="relative flex w-full items-center justify-center rounded bg-zinc-800 shadow duration-300 ease-in-out hover:scale-110 hover:bg-zinc-800 hover:shadow-xl focus:bg-zinc-800 dark:bg-zinc-700 dark:hover:bg-zinc-700 dark:focus:bg-zinc-700"
+                  className="relative flex w-full items-center justify-center rounded bg-zinc-800 py-1 px-4 shadow duration-300 ease-in-out hover:scale-110 hover:bg-zinc-800 hover:shadow-xl focus:bg-zinc-800 dark:bg-zinc-700 dark:hover:bg-zinc-700 dark:focus:bg-zinc-700"
                   onClick={() => router.push(item.slug)}
                 >
                   <div className="p-2">
@@ -66,7 +66,7 @@ const Nav = ({ path }: { path: string }) => {
               ) : (
                 <button
                   key={index}
-                  className="relative flex w-full items-center justify-center rounded bg-zinc-700 shadow duration-300 ease-in-out hover:scale-110 hover:bg-zinc-800 hover:shadow-xl focus:bg-zinc-800 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:focus:bg-zinc-700"
+                  className="relative flex w-full items-center justify-center rounded bg-zinc-700 py-1 px-4 shadow duration-300 ease-in-out hover:scale-110 hover:bg-zinc-800 hover:shadow-xl focus:bg-zinc-800 dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:focus:bg-zinc-700"
                   onClick={() => router.push(item.slug)}
                 >
                   <div className="p-2">
@@ -80,7 +80,7 @@ const Nav = ({ path }: { path: string }) => {
         <div className="flex flex-row gap-12">
           {mounted === true && (
             <button
-              className="flex w-full items-center justify-center rounded bg-zinc-700 shadow duration-300 ease-in-out hover:scale-110 hover:bg-zinc-800 hover:shadow-xl dark:bg-zinc-800 dark:hover:bg-zinc-700"
+              className="flex w-full items-center justify-center rounded bg-zinc-700 py-1 px-4 shadow duration-300 ease-in-out hover:scale-110 hover:bg-zinc-800 hover:shadow-xl dark:bg-zinc-800 dark:hover:bg-zinc-700"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
               <div className="p-2 text-zinc-100">
@@ -89,7 +89,7 @@ const Nav = ({ path }: { path: string }) => {
             </button>
           )}
           <button
-            className="flex w-full items-center justify-center rounded bg-zinc-700 shadow duration-300 ease-in-out hover:scale-110 hover:bg-zinc-800 hover:shadow-xl dark:bg-zinc-800 dark:hover:bg-zinc-700"
+            className="flex w-full items-center justify-center rounded bg-zinc-700 py-1 px-4 shadow duration-300 ease-in-out hover:scale-110 hover:bg-zinc-800 hover:shadow-xl dark:bg-zinc-800 dark:hover:bg-zinc-700"
             //   onClick={() => router.push(item.slug)}
             // onClick={() => query.toggle}
           >

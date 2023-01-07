@@ -1,13 +1,21 @@
 import Link from "next/link";
 import type { ReactElement } from "react";
 
-const Card = ({ children, href }: { children: ReactElement; href: string }) => {
+const Card = ({
+  children,
+  href,
+  target,
+}: {
+  children: ReactElement;
+  href: string;
+  target?: string;
+}) => {
   return (
     <>
       <Link
-        className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
+        className="flex max-w-xs flex-col gap-4 rounded-xl bg-black/10 p-4 text-black hover:bg-white/20 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
         href={href}
-        target="_blank"
+        target={target ? target : ""}
       >
         {children}
       </Link>
