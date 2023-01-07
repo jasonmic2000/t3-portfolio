@@ -14,13 +14,13 @@ const MyApp: AppType<{ session: Session | null }> = ({
 }) => {
   return (
     <SessionProvider session={session}>
-      {/* <ThemeProvider attribute="class"> */}
-      <NextNProgress
-        color="#78716c"
-        options={{ showSpinner: false, easing: "ease" }}
-      />
-      <Component {...pageProps} />
-      {/* </ThemeProvider> */}
+      <ThemeProvider attribute="class">
+        <NextNProgress
+          color="#78716c"
+          options={{ showSpinner: false, easing: "ease" }}
+        />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </SessionProvider>
   );
 };
