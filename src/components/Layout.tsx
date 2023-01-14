@@ -3,6 +3,9 @@ import { useRouter } from "next/router";
 import React from "react";
 import type { ReactElement } from "react";
 import Navbar from "./Nav";
+import { KBarProvider } from "kbar";
+import { actions } from "../lib/actions";
+import Palette from "./Cmd";
 
 const Layout = ({ children }: { children: ReactElement }) => {
   const currentRoute = useRouter().pathname;
@@ -33,8 +36,13 @@ const Layout = ({ children }: { children: ReactElement }) => {
           }`}
         />
       </Head>
-      <Navbar path={currentRoute} />
-      {children}
+      <KBarProvider actions={actions}>
+        <main className="font-clash max-h-auto relative flex min-h-screen flex-col items-center overflow-x-hidden bg-zinc-100 selection:bg-zinc-200/30 dark:bg-zinc-900">
+          <Palette />
+          <Navbar path={currentRoute} />
+          {children}
+        </main>
+      </KBarProvider>
     </div>
   );
 };
