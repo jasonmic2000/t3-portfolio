@@ -1,10 +1,41 @@
-import { FiSun, FiMoon, FiCommand } from "react-icons/fi";
+import {
+  FiHome,
+  FiClock,
+  FiPaperclip,
+  FiUser,
+  FiSun,
+  FiMoon,
+  FiZap,
+  FiCommand,
+} from "react-icons/fi";
 import { useRouter } from "next/router";
 import React from "react";
 import { useState, useEffect } from "react";
 import { useKBar } from "kbar";
 import { useTheme } from "next-themes";
-import { actions as NavbarItems } from "../lib/actions";
+
+const NavbarItems = [
+  {
+    name: "Home",
+    slug: "/",
+    icon: FiHome,
+  },
+  {
+    name: "About",
+    slug: "/about",
+    icon: FiUser,
+  },
+  {
+    name: "Links",
+    slug: "/links",
+    icon: FiPaperclip,
+  },
+  {
+    name: "Dashboard",
+    slug: "/dashboard",
+    icon: FiZap,
+  },
+];
 
 const Nav = ({ path }: { path: string }) => {
   const router = useRouter();
