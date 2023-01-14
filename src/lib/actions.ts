@@ -8,7 +8,7 @@ export const actions = [
     keywords: "home",
     perform: () => (window.location.pathname = "/"),
     slug: "/",
-    icon: FiHome,
+    icon: FiHome({ size: "1rem" }),
   },
   {
     id: "about",
@@ -17,7 +17,7 @@ export const actions = [
     keywords: "about",
     perform: () => (window.location.pathname = "about"),
     slug: "/about",
-    icon: FiUser,
+    icon: FiUser({ size: "1rem" }),
   },
   {
     id: "links",
@@ -26,7 +26,7 @@ export const actions = [
     keywords: "links",
     perform: () => (window.location.pathname = "links"),
     slug: "/links",
-    icon: FiPaperclip,
+    icon: FiPaperclip({ size: "1rem" }),
   },
   {
     id: "dashboard",
@@ -35,6 +35,6 @@ export const actions = [
     keywords: "dashboard",
     perform: () => (window.location.pathname = "dashboard"),
     slug: "/dashboard",
-    icon: FiZap,
+    icon: FiZap({ size: "1rem" }),
   },
 ];
