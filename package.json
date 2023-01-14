@@ -26,9 +26,11 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.7.1",
     "superjson": "1.9.1",
+    "tailwind-scrollbar": "^2.1.0",
     "zod": "^3.18.0"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^18.0.0",
     "@types/prettier": "^2.7.2",
     "@types/react": "^18.0.14",
