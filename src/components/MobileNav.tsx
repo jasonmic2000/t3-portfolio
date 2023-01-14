@@ -1,6 +1,5 @@
 import {
   FiHome,
-  FiClock,
   FiPaperclip,
   FiUser,
   FiSun,
