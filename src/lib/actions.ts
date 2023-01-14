@@ -1,4 +1,4 @@
-import { FiHome, FiPaperclip, FiUser, FiZap } from "react-icons/fi";
+import { FiHome, FiPaperclip, FiTwitter, FiUser, FiZap } from "react-icons/fi";
 
 export const actions = [
   {
@@ -7,7 +7,7 @@ export const actions = [
     shortcut: ["h"],
     keywords: "home",
     perform: () => (window.location.pathname = "/"),
-    slug: "/",
+    section: "Navigation",
     icon: FiHome({ size: "1rem" }),
   },
   {
@@ -16,7 +16,7 @@ export const actions = [
     shortcut: ["a"],
     keywords: "about",
     perform: () => (window.location.pathname = "about"),
-    slug: "/about",
+    section: "Navigation",
     icon: FiUser({ size: "1rem" }),
   },
   {
@@ -25,7 +25,7 @@ export const actions = [
     shortcut: ["l"],
     keywords: "links",
     perform: () => (window.location.pathname = "links"),
-    slug: "/links",
+    section: "Navigation",
     icon: FiPaperclip({ size: "1rem" }),
   },
   {
@@ -34,7 +34,16 @@ export const actions = [
     shortcut: ["d"],
     keywords: "dashboard",
     perform: () => (window.location.pathname = "dashboard"),
-    slug: "/dashboard",
+    section: "Navigation",
     icon: FiZap({ size: "1rem" }),
+  },
+  {
+    id: "twitter",
+    name: "Twitter",
+    shortcut: ["t"],
+    keywords: "twitter",
+    perform: () => window.open("https://twitter.com/jasonmic2000"),
+    section: "Exteral",
+    icon: FiTwitter({ size: "1rem" }),
   },
 ];
