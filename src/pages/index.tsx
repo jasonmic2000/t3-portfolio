@@ -13,7 +13,7 @@ const Home: NextPage = () => {
     <>
       <Layout>
         <main className="flex min-h-screen flex-col items-center justify-center">
-          <div className="relative flex h-full w-full flex-col items-center justify-center p-8">
+          <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
             <section className="prose mb-20 mt-16 flex w-full flex-col-reverse items-start justify-between gap-4 md:mt-0 md:flex-row md:gap-8 lg:mt-0 lg:flex-row lg:gap-14">
               <div className="leading-none">
                 <h2 className="m-0 text-[2.5rem] font-extrabold text-zinc-900 dark:text-zinc-200">
@@ -22,16 +22,11 @@ const Home: NextPage = () => {
                   </span>
                   <span className="text-[hsl(280,100%,70%)]">Michael</span>
                 </h2>
-                <p className="m-0 my-2 text-zinc-800 dark:text-zinc-300">
-                  Web Developer
-                </p>
                 <p className="m-0 mb-4 text-zinc-800 dark:text-zinc-300">
-                  Currently working at Maxxton Technologies
+                  Web Dev currently working at Maxxton Technologies
                 </p>
                 <p className="m-0 text-sm text-zinc-700 dark:text-zinc-400">
-                  Learning about web and trying to help out other devs in the
-                  process. I love open source and writing about tech
-                  occasionally.
+                  Learning about the web and experimenting with new technologies as well.
                 </p>
               </div>
               <div className="min-w-fit">
