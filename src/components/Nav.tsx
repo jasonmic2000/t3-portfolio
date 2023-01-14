@@ -49,9 +49,7 @@ const Nav = ({ path }: { path: string }) => {
     false,
   ]);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
   return (
     <div className="flex h-full min-h-full w-full flex-col items-center justify-start pt-6">

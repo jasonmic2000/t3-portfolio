@@ -6,6 +6,7 @@ import Navbar from "./Nav";
 import { KBarProvider } from "kbar";
 import { actions } from "../lib/actions";
 import Palette from "./Cmd";
+import MobileNav from "./MobileNav";
 
 const Layout = ({ children }: { children: ReactElement }) => {
   const currentRoute = useRouter().pathname;
@@ -39,7 +40,14 @@ const Layout = ({ children }: { children: ReactElement }) => {
       <KBarProvider actions={actions}>
         <main className="font-clash max-h-auto relative flex min-h-screen flex-col items-center overflow-x-hidden bg-zinc-100 selection:bg-zinc-200/30 dark:bg-zinc-900">
           <Palette />
-          <Navbar path={currentRoute} />
+          <div className="flex h-full w-full">
+            <div className="fixed hidden w-full md:block lg:block">
+              <Navbar path={currentRoute} />
+            </div>
+            <div className="fixed top-0 z-50 block w-full px-8 pt-4 md:hidden lg:hidden">
+              <MobileNav path={currentRoute} />
+            </div>
+          </div>
           {children}
         </main>
       </KBarProvider>
