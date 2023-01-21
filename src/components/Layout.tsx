@@ -12,7 +12,7 @@ const Layout = ({ children }: { children: ReactElement }) => {
   const currentRoute = useRouter().pathname;
 
   return (
-    <div /*className="bg-gradient-to-b from-[#2e026d] to-[#15162c]"*/>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <title>Jason Michael</title>
@@ -38,7 +38,7 @@ const Layout = ({ children }: { children: ReactElement }) => {
         />
       </Head>
       <KBarProvider actions={actions}>
-        <main className="font-clash max-h-auto relative flex min-h-screen flex-col items-center overflow-x-hidden bg-zinc-100 selection:bg-zinc-200/30 dark:bg-zinc-900">
+        <main className="font-clash max-h-auto relative flex min-h-screen flex-col items-center bg-zinc-100 overflow-x-hidden selection:bg-zinc-200/30 dark:bg-zinc-900">
           <Palette />
           <div className="flex h-full w-full">
             <div className="hidden w-full md:block lg:block">

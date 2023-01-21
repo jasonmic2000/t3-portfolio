@@ -1,4 +1,5 @@
 import { PinnedRepos } from "../lib/types";
+import Card from "./Card";
 import { FiStar, FiArrowRight } from "react-icons/fi";
 import { VscRepoForked } from "react-icons/vsc";
 
@@ -11,7 +12,7 @@ const PinnedRepos = (props: { pinnedRepos: PinnedRepos }) => {
       >
         Top Projects
       </h2>
-      <div className="grid-cold-1 grid w-full gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
         {props.pinnedRepos.map((repo, index) => (
           <a
             key={index}
@@ -22,18 +23,12 @@ const PinnedRepos = (props: { pinnedRepos: PinnedRepos }) => {
           >
             <div className="flex h-full cursor-pointer flex-col justify-between rounded-lg bg-zinc-200 p-4 dark:bg-zinc-800">
               <div>
-                <h3>{repo.name}</h3>
-                <p>{repo.description}</p>
-              </div>
-              <div className="flex gap-6">
-                <div>
-                  <FiStar />
-                  <p className="m-0">{repo.stars}</p>
-                </div>
-                <div>
-                  <VscRepoForked />
-                  <p className="m-0">{repo.forks}</p>
-                </div>
+                <h3 className="m-0 mb-6 w-full text-lg font-semibold leading-none tracking-tight text-zinc-800 dark:text-zinc-200">
+                  {repo.name}
+                </h3>
+                <p className="m-0 mb-6 w-full text-sm tracking-tight text-zinc-700 dark:text-zinc-300">
+                  {repo.description}
+                </p>
               </div>
             </div>
           </a>
