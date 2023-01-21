@@ -1,12 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { type NextPage } from "next";
 import Layout from "../components/Layout";
 import { signIn, signOut, useSession } from "next-auth/react";
+import { getPinnedRepos } from "../lib/repos";
+import type { Repo } from "../lib/types";
 
 import { trpc } from "../utils/trpc";
 import Card from "../components/Card";
+import PinnedRepos from "../components/PinnedRepos";
 
-const Home: NextPage = () => {
+const Home = (props: { pinnedRepos: Repo[] }) => {
   const hello = trpc.example.hello.useQuery({ text: "from tRPC" });
 
   return (
@@ -26,7 +28,8 @@ const Home: NextPage = () => {
                   Web Dev currently working at Maxxton Technologies
                 </p>
                 <p className="m-0 text-sm text-zinc-700 dark:text-zinc-400">
-                  Learning about the web and experimenting with new technologies as well.
+                  Learning about the web and experimenting with new technologies
+                  as well.
                 </p>
               </div>
               <div className="min-w-fit">
@@ -70,11 +73,22 @@ const Home: NextPage = () => {
               <AuthShowcase />
             </div>
           </div>
+          <PinnedRepos pinnedRepos={props.pinnedRepos} />
         </main>
       </Layout>
     </>
   );
 };
+
+export async function getStaticProps() {
+  const pinnedRepos = await getPinnedRepos();
+  return {
+    props: {
+      pinnedRepos: pinnedRepos,
+    },
+    revalidate: 43200,
+  };
+}
 
 export default Home;
 
