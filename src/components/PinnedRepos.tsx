@@ -1,7 +1,6 @@
 import { PinnedRepos } from "../lib/types";
 import Card from "./Card";
-import { FiStar, FiArrowRight } from "react-icons/fi";
-import { VscRepoForked } from "react-icons/vsc";
+import { FiArrowRight } from "react-icons/fi";
 
 const PinnedRepos = (props: { pinnedRepos: PinnedRepos }) => {
   return (
