@@ -7,15 +7,15 @@ export default function LinksComponent() {
         {links.map((link, index) => (
           <div
             key={index}
-            className="flex w-full cursor-pointer items-center justify-between rounded-lg bg-zinc-100/60 p-2 duration-200 hover:-translate-y-1 hover:shadow-lg dark:bg-zinc-900/60"
+            className="flex w-full cursor-pointer items-center justify-between rounded-lg bg-zinc-100/60 p-2 duration-200 hover:-translate-y-1 hover:bg-zinc-300 hover:shadow-lg dark:bg-zinc-900/60 dark:hover:bg-white/20"
             onClick={() => window.open(link.url, "_blank")}
           >
-            <p className="m-0 text-sm text-zinc-800 dark:text-zinc-300 md:text-base lg:text-base">
+            <p className="m-0 text-sm text-zinc-900 dark:text-slate-50 md:text-base lg:text-base">
               {link.name}{" "}
               <span className="text-zinc-500 dark:text-zinc-600">{" // "}</span>{" "}
               {link.value}
             </p>
-            <p className="m-0 text-zinc-800 dark:text-zinc-300">
+            <p className="m-0 text-zinc-900 dark:text-slate-50">
               {link.icon({})}
             </p>
           </div>

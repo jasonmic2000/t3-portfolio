@@ -16,7 +16,7 @@ const PinnedRepos = (props: { pinnedRepos: PinnedRepos }) => {
           <Card key={index} href={`${repo.url}`} target="_blank">
             <div className="flex h-full cursor-pointer flex-col justify-between rounded-lg p-4">
               <div>
-                <h3 className="m-0 mb-6 w-full text-xl font-semibold leading-none tracking-tight text-slate-900 dark:text-slate-50">
+                <h3 className="m-0 mb-6 w-full text-xl font-semibold leading-none tracking-tight text-zinc-900 dark:text-slate-50">
                   {repo.name}
                 </h3>
                 <p className="m-0 mb-6 w-full text-sm tracking-tight text-zinc-700 dark:text-zinc-300">
