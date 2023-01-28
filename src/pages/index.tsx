@@ -24,12 +24,12 @@ const Home = (props: { pinnedRepos: Repo[] }) => {
                   </span>
                   <span className="text-[hsl(280,100%,70%)]">Michael</span>
                 </h2>
-                <p className="m-0 mb-4 text-zinc-800 dark:text-zinc-300">
+                <p className="m-0 mb-4 text-slate-900 dark:text-slate-50">
                   Web Dev currently working at Maxxton Technologies
                 </p>
                 <p className="m-0 text-sm text-zinc-700 dark:text-zinc-400">
-                  Learning about the web and experimenting with new technologies
-                  as well.
+                  Learning about the web and experimenting with new
+                  technologies.
                 </p>
               </div>
               <div className="min-w-fit">
@@ -40,6 +40,7 @@ const Home = (props: { pinnedRepos: Repo[] }) => {
                 />
               </div>
             </section>
+            <PinnedRepos pinnedRepos={props.pinnedRepos} />
           </div>
           <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
             <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
@@ -73,7 +74,6 @@ const Home = (props: { pinnedRepos: Repo[] }) => {
               <AuthShowcase />
             </div>
           </div>
-          <PinnedRepos pinnedRepos={props.pinnedRepos} />
         </main>
       </Layout>
     </>
