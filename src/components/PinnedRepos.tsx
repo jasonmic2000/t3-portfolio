@@ -14,16 +14,10 @@ const PinnedRepos = (props: { pinnedRepos: PinnedRepos }) => {
       </h2>
       <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
         {props.pinnedRepos.map((repo, index) => (
-          <Card
-            key={index}
-            href={`${repo.url}`}
-            target="_blank"
-            // rel="noreferrer"
-            // className="gap-4 rounded-lg bg-gradient-to-r from-zinc-500 to-stone-500 p-1 shadow-lg shadow-zinc-800/10 duration-300 hover:scale-[103%] hover:shadow-xl hover:shadow-zinc-800/10 dark:shadow-zinc-200/10 dark:hover:shadow-zinc-200/10"
-          >
+          <Card key={index} href={`${repo.url}`} target="_blank">
             <div className="flex h-full cursor-pointer flex-col justify-between rounded-lg p-4">
               <div>
-                <h3 className="m-0 mb-6 w-full text-lg font-semibold leading-none tracking-tight text-slate-900 dark:text-slate-50">
+                <h3 className="m-0 mb-6 w-full text-xl font-semibold leading-none tracking-tight text-slate-900 dark:text-slate-50">
                   {repo.name}
                 </h3>
                 <p className="m-0 mb-6 w-full text-sm tracking-tight text-zinc-700 dark:text-zinc-300">
