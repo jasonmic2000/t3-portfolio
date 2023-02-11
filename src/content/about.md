@@ -9,7 +9,7 @@ publish-date: 11 February 2023
 My name is Jason Michael.<br>
 
 I'm a Computer Science graduate specializing
-in Web Development. I currently work as a Software Engineer (React) with the
+in Web Development. I am currently working as a Software Engineer (React) with the
 Web Manager team at  
 <a href="https://www.maxxton.com/" target="blank">Maxxton Technologies</a>.<br>
 
