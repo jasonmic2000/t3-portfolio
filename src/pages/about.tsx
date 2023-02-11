@@ -11,14 +11,7 @@ export default function About(props: { html: string }) {
           <div
             className="prose-headings:leading-none prose-h1:mb-3 prose-h1:text-slate-900 prose-h2:mt-0 prose-p:m-0 prose-p:leading-tight prose-p:text-zinc-700 dark:prose-h1:text-slate-50 dark:prose-p:text-zinc-400"
             dangerouslySetInnerHTML={{ __html: props.html }}
-          >
-            {/* <h1 className="mb-3 leading-none text-slate-900 dark:text-slate-50">
-              About Me
-            </h1>
-            <p className="m-0 leading-tight text-zinc-700 dark:text-zinc-400">
-              🚧This page is currently under construction.🚧
-            </p> */}
-          </div>
+          ></div>
         </section>
         <Footer />
       </div>
