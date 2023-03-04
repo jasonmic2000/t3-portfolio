@@ -7,6 +7,7 @@ import { KBarProvider } from "kbar";
 import { actions } from "../lib/actions";
 import Palette from "./Cmd";
 import MobileNav from "./MobileNav";
+import FloatingButton from "./FloatingButton";
 
 const Layout = ({ children }: { children: ReactElement }) => {
   const currentRoute = useRouter().pathname;
@@ -51,6 +52,7 @@ const Layout = ({ children }: { children: ReactElement }) => {
           {children}
         </main>
       </KBarProvider>
+      <FloatingButton />
     </div>
   );
 };
