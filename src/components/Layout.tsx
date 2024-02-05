@@ -52,7 +52,7 @@ const Layout = ({ children }: { children: ReactElement }) => {
           {children}
         </main>
       </KBarProvider>
-      <FloatingButton />
+      {/* <FloatingButton /> */}
     </div>
   );
 };
