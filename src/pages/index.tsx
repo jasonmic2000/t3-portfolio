@@ -21,7 +21,7 @@ const Home = (props: { pinnedRepos: Repo[] }) => {
                   <span className="text-fuchsia-400">Michael</span>
                 </h2>
                 <p className="m-0 mb-4 text-slate-900 dark:text-slate-50">
-                  Web Dev currently working at Maxxton Technologies
+                  Software Engineer currently working at Maxxton
                 </p>
                 <p className="m-0 text-sm text-zinc-700 dark:text-zinc-400">
                   Learning about the web and experimenting with new
