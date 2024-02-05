@@ -35,7 +35,7 @@ if you prefer).<br><br>
 
 Oh, and also, here's my
 <a
-  href="https://drive.google.com/open?export=download&id=1vipn7Xg87IDXF9yrwWOwHKBguRwrq2Kr"
+  href="https://drive.google.com/uc?export=download&id=1UhxMisFcrQ3UvXRYZOAVGDVnvEs3Lm6y"
   target="_blank">
 resume/CV.
 </a>
